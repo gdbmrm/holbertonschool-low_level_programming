@@ -1,7 +1,2 @@
-#include <c>
-int main(void)
-{
-printf("Hello world/n");
-return 0;
-
-}
+#!/bin/bash
+$CFILE > c

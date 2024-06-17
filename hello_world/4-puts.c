@@ -1,4 +1,10 @@
 #include <stdio.h>
+/**
+ * main - Entry point
+ * 
+ * Description: 'programme C qui imprime "Programming .." sans utliser printf'
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {

@@ -1,6 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 /**
  * main - Entry point
  * Description: 'This program will assign a random
@@ -18,13 +18,11 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
-	{
-	printf("%s\n is positive")
-	else
-		if (n < 0)
-		printf("%s\n is negative")
-		else
-		printf("%s\n is zero")
-	}
-	return (0);
+        	printf("%d is positive.", n);
+    	else if (n < 0)
+        	printf("%d is negative.", n);
+    	else if (n == 0)
+        	printf("%d is zero.", n);
+
+return (0);
 }

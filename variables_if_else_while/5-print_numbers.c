@@ -8,15 +8,13 @@
 
 int main(void)
 {
-        char *entier = "0123456789";
-        int i = 0;
+	char *entier = "0123456789";
+	int i = 0;
 
-        while (i < 10)
-        {       putchar(entier[i]);
-                i++;
-        }
-
-
-        putchar('\n');
-        return (0);
+	while (i < 10)
+	{	putchar(entier[i]);
+		i++;
+	}
+	putchar('\n');
+	return (0);
 }

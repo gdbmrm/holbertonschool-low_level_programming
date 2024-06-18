@@ -13,11 +13,11 @@ int main(void)
 
 	while (i < 26)
 	{
-		if (i != 5 && i != 17)
+		if (i != 4  && i != 16)
 		{
 			putchar(str[i]);
-			i++;
 		}
+		i++;
 	}
 
 	putchar('\n');

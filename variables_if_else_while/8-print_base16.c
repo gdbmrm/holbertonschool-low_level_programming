@@ -8,20 +8,20 @@
 
 int main(void)
 {
-        char *chiffres = "0123456789";
-        char *lettres = "abcdef";
-        int i = 0;
-        int b = 0;
+	char *chiffres = "0123456789";
+	char *lettres = "abcdef";
+	int i = 0;
+	int b = 0;
 
-        while (i < 10)
-        {       putchar(chiffres[i]);
-                i++;
-        }
-        while (b < 6)
-        {       putchar(lettres[b]);
-                b++;
-        }
+	while (i < 10)
+	{	putchar(chiffres[i]);
+		i++;
+	}
+	while (b < 6)
+	{	putchar(lettres[b]);
+		b++;
+	}
 
-        putchar('\n');
-        return (0);
+	putchar('\n');
+	return (0);
 }

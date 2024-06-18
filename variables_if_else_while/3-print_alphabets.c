@@ -8,20 +8,20 @@
 
 int main(void)
 {
-        char *str = "abcdefghijklmnopqrstuvwxyz";
-        char *strup = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        int i = 0;
-        int b = 0;
+	char *str = "abcdefghijklmnopqrstuvwxyz";
+	char *strup = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int i = 0;
+	int b = 0;
 
-        while (i < 26)
-        {       putchar(str[i]);
-                i++;
-        }
+	while (i < 26)
+	{       putchar(str[i]);
+		i++;
+	}
+	while (b < 26)
+	{       putchar(strup[b]);
+		b++;
+	}
 
-        while (b < 26)
-        {       putchar(strup[b]);
-                b++;
-        }
-        putchar('\n');
-        return (0);
+	putchar('\n');
+	return (0);
 }

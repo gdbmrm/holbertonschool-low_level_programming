@@ -9,7 +9,7 @@
 int main(void)
 {
 	char *str = "abcdefghijklmnopqrstuvwxyz";
-	int i = 27;
+	int i = 26;
 
 	while (i >= 0)
 	{

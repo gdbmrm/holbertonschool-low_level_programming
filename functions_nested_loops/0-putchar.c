@@ -2,7 +2,6 @@
 #include "main.h"
 /**
  *main prints_putchar
-
  * return :0s
  */
 

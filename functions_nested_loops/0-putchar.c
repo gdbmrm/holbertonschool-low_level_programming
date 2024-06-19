@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * Write a program that prints _putchar, followed by a new line.
+ *
+ * @return 0 si succès
  */
 
 int main(void)

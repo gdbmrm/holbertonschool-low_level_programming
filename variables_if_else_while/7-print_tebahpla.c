@@ -9,9 +9,9 @@
 int main(void)
 {
 	char *str = "abcdefghijklmnopqrstuvwxyz";
-	int i = 25;
+	int i = 27;
 
-	while (i != 0)
+	while (i >= 0)
 	{
 		putchar(str[i]);
 		i--;

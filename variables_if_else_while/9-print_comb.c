@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  * Description: 'Write a program that prints the alphabet
@@ -12,9 +13,11 @@ int main(void)
 
         while (i < 10)
         {       putchar(48 + i);
-		putchar(',');
-		putchar(' ');
-                i++;
+		if (i < 9)
+		{	putchar(',');
+			putchar(' ');
+		}
+		i++;
         }
         putchar('\n');
         return (0);

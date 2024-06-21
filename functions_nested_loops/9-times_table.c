@@ -24,11 +24,15 @@ void times_table(void)
 			{
 				_putchar('0' + multi / 10);
 				_putchar('0' + multi % 10);
-				_putchar(',');
-				_putchar(' ');
+					if (num1 < 10)
+					{
+						_putchar(',');
+						_putchar(' ');
+					}
 			} else
 			{	_putchar('0' + multi);
 				_putchar(',');
+				_putchar(' ');
 				_putchar(' ');
 		}
 		}

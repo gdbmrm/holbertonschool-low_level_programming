@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: 'Write a program that prints the alphabet
- * in lowercase, followed by a new line.'
+ * Description: 'Write a program that prints numbers, followed by a new line.'
  * Return: Always 0 (Success)
  */
 

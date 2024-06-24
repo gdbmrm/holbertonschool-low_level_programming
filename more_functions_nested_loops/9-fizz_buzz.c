@@ -42,7 +42,6 @@ void multiples(void)
 	printf(" ");
 
 	}
-	printf("\n");
 }
 
 /**

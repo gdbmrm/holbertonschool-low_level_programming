@@ -14,7 +14,10 @@ void print_square(int size)
 {
 	int num1, num2;
 
-	if (size != 0)
+	if (size <= 0)
+	{
+		_putchar('\n');
+	} else
 	{
 		for (num1 = 0; num1 <= size; num1++)
 		{

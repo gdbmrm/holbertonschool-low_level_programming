@@ -12,6 +12,7 @@ void print_rev(char *s)
 
 	int len;
 	int n;
+	char *t = "";
 
 	for (len = 0; s[len] != '\0'; len++)
 	{
@@ -19,7 +20,11 @@ void print_rev(char *s)
 
 	for (n = len - 1; n >= 0; n--)
 	{
-		_putchar(s[n]);
+		*t = *t + s[n];
+	}
+	for (len = 0; s[len] != '\0'; len++)
+	{
+
 	}
 	_putchar('\n');
 }

@@ -38,7 +38,6 @@ void multiples(void)
 		if (a != 100)
 		{
 			printf(" ");
-	
 		}
 	}
 	printf("\n");

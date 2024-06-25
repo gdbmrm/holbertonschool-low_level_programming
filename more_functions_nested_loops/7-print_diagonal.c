@@ -1,30 +1,33 @@
 #include "main.h"
+/**
+ * print_diagonal - imprime une diagonale avec des backslash
+ *
+ * Write a function that draws a diagonal line on the terminal.
+ *
+ * @n: taille de la diagonale
+ */
 
 
 void print_diagonal(int n)
 {
-	int a = 0;
-	int esp = 0;
-
-        if (n <= 0)
-        {
-                _putchar('\n');
-        }
-	for (a = 0; a < n; a++)
-        {
-		for (esp = 0; esp < n; esp++)
-		{	
-			while (a != n)
-                		{
-                        		_putchar(' ');
-                        		_putchar('\\');
-					a++;
-					_putchar('\n');
-
-                		}
-	_putchar('\n');
-        	}
+	{
+	int num1, num2;
 
 
+	if (n <= 0)
+	{
+		_putchar('\n');
+	} else
+	{
+		for (num1 = 0; num1 < n; num1++)
+		{
+			for (num2 = 0; num2 < num1; num2++)
+			{
+				_putchar(' ');
+			}
+		_putchar('\\');
+		_putchar('\n');
+		}
 	}
-}	
+	}
+}

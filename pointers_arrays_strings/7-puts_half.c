@@ -12,19 +12,22 @@
 
 void puts_half(char *str)
 {
-	int len;
+	int len = 0;
 	int moitie;
 
-	for (len = 0; str[len] != '\0'; len++)
+	while (str[len] != '\0')
 	{
+		len++;
 	}
+
 	if (len % 2 != 0)
-	}
+	{
 		moitie = (len / 2) + 1;
 	} else
 	{
 		moitie = len / 2;
 	}
+
 	for (; moitie < len; moitie++)
 	{
 		_putchar(str[moitie]);

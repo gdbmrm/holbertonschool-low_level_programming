@@ -3,6 +3,6 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	dest = src;
+	static char dest = src;
 	return (dest);
 }

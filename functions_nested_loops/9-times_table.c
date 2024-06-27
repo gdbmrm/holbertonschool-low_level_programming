@@ -19,24 +19,23 @@ void times_table(void)
 	{
 		for (num1 = 0; num1 < 10; num1++)
 		{	multi = num1 * num2;
-
 			if (multi >= 10)
 			{
 				_putchar('0' + multi / 10);
 				_putchar('0' + multi % 10);
-					if (num1 < 10)
-					{
-						_putchar(',');
-						_putchar(' ');
-					}
+
 			} else
 			{	_putchar('0' + multi);
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
+			}
+			if (num1 < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
 		}
-		}
+	}
 	_putchar('\n');
 	}
-
 }

@@ -2,11 +2,17 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i;
+	int i, j;
+	char *result[256];
 
 	for (i = 0; dest[i] != '\0'; i++)
 	{
-		dest = src[i]
+		*result = dest[i];
 	}
-	return (dest);
+	for (j = 0; src[j] != '\0'; j++)
+	{
+		*result =  src[j];
+	}
+	*result = '\0';
+	return (result);
 }

@@ -21,7 +21,7 @@ char *_strncat(char *dest, char *src, int n)
 	for (j = 0; dest[j] != '\0'; j++)
 	{
 	}
-	if (j < n)
+	if (j <= n)
 	{
 		return (start_dest);
 	}
@@ -31,10 +31,10 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	for (i = 0; i < n; ++i)
 	{
+		
 		*dest = *src;
 		dest++;
 		src++;
 	}
 	return (start_dest);
-
 }

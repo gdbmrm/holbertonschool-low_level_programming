@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcat - fonction qu concatène deux caract�res
+ * _strcat - fonction qui concatène deux caraceres
  *
  * Write a function that concatenates two strings
  *

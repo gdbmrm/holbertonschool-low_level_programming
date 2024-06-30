@@ -2,11 +2,11 @@
 /**
  * leet - nom fonction
  *
- * Write a function that encodes a string into 1337.
+ * function that encodes a string into 1337.
  *
  * @c: chaine de caractere a modifier
  *
- * Return: chaine de caractere modifi√
+ * Return: chaine de caractere modifi
  */
 char *leet(char *c)
 {

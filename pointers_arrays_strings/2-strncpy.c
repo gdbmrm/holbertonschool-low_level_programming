@@ -29,9 +29,10 @@ char *_strncpy(char *dest, char *src, int n)
 		dest++;
 		src++;
 	}
-	for (; i < n; i++)
+	while (i < n)
 	{
 		dest = '\0';
+		i++;
 	}
 	return (start_dest);
 }

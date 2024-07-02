@@ -4,12 +4,14 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int somme = 0;
+	int somme1 = 0;
+	int somme2 = 0;
 
 	for (i = 0; i < size; i++)
 	{
-		somme = somme + a[i][i];
+		somme1 = somme1 + a[i * size + i];
+		somme2 = somme2 + a[i * size + (size - 1 - i)];
 	}
-	printf("%d", somme);
+	printf("%d, %d", somme1, somme2);
 	printf("\n");
 }

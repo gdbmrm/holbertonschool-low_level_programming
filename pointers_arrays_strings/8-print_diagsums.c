@@ -8,7 +8,7 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		somme = somme + a[i];
+		somme = somme + a[i][i];
 	}
 	printf("%d", somme);
 	printf("\n");

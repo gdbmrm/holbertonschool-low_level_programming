@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _memset - nom fonction
  *
@@ -13,9 +14,9 @@ char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
-	if (s[0] == '\0')
+	if (s == NULL)
 	{
-		return s;
+		return (NULL);
 	}
 	for (i = 0; i < n; i++)
 	{

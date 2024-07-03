@@ -4,6 +4,8 @@
  *
  * char *_memcpy(char *dest, char *src, unsigned int n)
  *
+ * Write a function that copies memory area.
+ *
  * @dest: chaine de caractere destination
  * @src: chaine de caracteres source
  * @n: nombre de byte a recopier
@@ -14,6 +16,10 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
+	if (src[0] == '\0')
+	{
+		return (dest);
+	}
 	for (i = 0; i <= n; i++)
 	{
 		dest[i] = src[i];

@@ -22,4 +22,6 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
+	double result = newton((double)n, precision);
+	return (_sqrt_recursion(n - 1));
 }

@@ -20,7 +20,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	ar = malloc(sizeof(str));
+	ar = malloc(sizeof(str) +1);
 
 	if (ar == NULL)
 	{
@@ -31,6 +31,7 @@ char *_strdup(char *str)
 		ar[i] = str[i];
 		i++;
 	}
+	ar = '\0';
 	return (ar);
 	free(ar);
 }

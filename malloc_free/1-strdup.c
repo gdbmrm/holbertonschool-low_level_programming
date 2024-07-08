@@ -15,11 +15,10 @@ char *_strdup(char *str)
 	char *ar;
 	int i = 0;
 
-	if (sizeof(str) == 0)
+	if (size == 0)
 	{
 		return (NULL);
 	}
-
 	ar = malloc(sizeof(str) +1);
 
 	if (ar == NULL)
@@ -31,7 +30,7 @@ char *_strdup(char *str)
 		ar[i] = str[i];
 		i++;
 	}
-	ar = '\0';
+	ar[i] = '\0';
 	return (ar);
 	free(ar);
 }

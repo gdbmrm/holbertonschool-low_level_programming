@@ -43,7 +43,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		ar[i] = s1[i];
 	}
-	for (j = 0; s2[j] != '\0'; j++, i++)
+	for (j = 0; j < lens2; j++, i++)
 	{
 		ar[i] = s2[j];
 	}

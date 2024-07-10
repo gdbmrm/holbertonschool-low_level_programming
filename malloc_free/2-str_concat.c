@@ -15,15 +15,25 @@ char *str_concat(char *s1, char *s2)
 {
 	char *ar;
 	unsigned long int i = 0, j = 0;
+	int lens1 = 0, lens2 = 0;
 
 	if (s1 == NULL)
 	{
 		s1 = "";
-	} else if (s2 == NULL)
+	}	
+	if (s2 == NULL)
 	{
 		s2 = "";
 	}
-	ar = malloc(sizeof(char) + sizeof(char));
+	while (s1[lens1] != '\0')
+        {
+                lens1++;
+        }
+	while (s2[lens2] != '\0')
+        {
+                lens2++;
+        }
+	ar = malloc(( lens2 + lens1 + 1) * sizeof(char));
 
 	if (ar == NULL)
 	{

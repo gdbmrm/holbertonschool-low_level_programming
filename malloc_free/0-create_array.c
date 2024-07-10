@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
  * create_array - cr√e un tableau et initialise toutes les valeurs a c
  *
@@ -22,7 +21,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
-	ar = malloc(sizeof(char) * size + 1);
+	ar = malloc(sizeof(char) * (size + 1));
 
 	if (ar == NULL)
 	{
@@ -34,5 +33,4 @@ char *create_array(unsigned int size, char c)
 	}
 	ar[i] = '\0';
 	return (ar);
-	free(ar);
 }

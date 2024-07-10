@@ -18,6 +18,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i = 0, j = 0;
 	unsigned int lens1 = 0, lens2 = 0;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	while (s2[lens2] != '\0')/** longueur de s2*/
 	{
 		lens2++;
@@ -26,18 +34,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		lens1++;
 	}
-	ar = malloc(lens1 + lens2 + 1);/**allocation dynamique des 2len + '\0'*/
+	ar = malloc((lens1 + lens2 + 1) * sizeof(char));/**allocation dynamique des 2len + '\0'*/
 	if (ar == NULL)
 	{
 		return (NULL);
-	}
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
 	}
 	while (s1[i] != '\0') /**pour copier s1 dans ar*/
 	{

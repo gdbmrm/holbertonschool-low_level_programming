@@ -13,14 +13,14 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ar;
-	int i;
+	unsigned int i;
 	char *ptr;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-
+/** verifie si nmemb ou size n'est pas Ãgal a 0*/
 	ar = malloc(nmemb * size);
 
 	if (ar == NULL)
@@ -29,9 +29,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	ptr = (char *)ar;
-	for (i = 0; ptr[i] != '\0'; i++)
+	for (i = 0; i < nmemb * size; i++)
 	{
 		ptr[i] = 0;
 	}
+/** initialise tous les bits a 0*/
 	return (ar);
 }

@@ -1,8 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
-/***
- * array_range - nom fonction 
+/**
+ * array_range - nom fonction
  *
  * Write a function that creates an array of integers.
  *

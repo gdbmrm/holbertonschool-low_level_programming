@@ -1,6 +1,15 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+/***
+ * array_range - nom fonction 
+ *
+ * Write a function that creates an array of integers.
+ *
+ * @min: nb min
+ * @max: nb max
+ * Return: array triÃ
+ */
 int *array_range(int min, int max)
 {
 	int *ar;
@@ -17,7 +26,7 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	for (;i < r; i++)
+	for (i = 0; i < r; i++)
 	{
 		ar[i] = min;
 		min++;

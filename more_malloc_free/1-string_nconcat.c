@@ -18,11 +18,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i = 0, j = 0;
 	unsigned int lens1 = 0, lens2 = 0;
 
-	if (s1 == NULL)
+	if (s1 == NULL)/** test si la chaine est NULL*/
 	{
 		s1 = "";
 	}
-	if (s2 == NULL)
+	if (s2 == NULL)/** test si la chaine est NULL*/
 	{
 		s2 = "";
 	}

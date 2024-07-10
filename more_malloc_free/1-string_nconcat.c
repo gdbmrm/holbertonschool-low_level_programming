@@ -16,7 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ar;
 	unsigned int i = 0, j = 0;
-	unsigned int lens1, lens2;
+	unsigned int lens1 = 0, lens2 = 0;
 
 	while (s2[lens2] != '\0')/** longueur de s2*/
 	{
@@ -43,6 +43,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ar[i] = s1[i];
 		i++;
+	}
+	if (n >= lens2)
+	{
+		while (s2[j] != '\0')
+		{
+			ar[i] = s2[j];
+			j++;
+			i++;
+		}
 	}
 	while (j < n && s2[j] != '\0') /**copie a la suite s2 dans ar*/
 	{

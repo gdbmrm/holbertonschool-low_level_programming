@@ -33,7 +33,7 @@ char *str_concat(char *s1, char *s2)
         {
                 lens2++;
         }
-	ar = malloc(( lens2 + lens1 + 1) * sizeof(char));
+	ar = malloc(( lens1 + lens2 + 1) * sizeof(char));
 
 	if (ar == NULL)
 	{

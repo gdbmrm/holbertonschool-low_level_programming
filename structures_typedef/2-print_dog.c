@@ -3,7 +3,6 @@
 /**
  * print_dog - affiche un chien
  * @d: structure
-
  * Description: fonction qui affiche un chien
  */
 void print_dog(struct dog *d)

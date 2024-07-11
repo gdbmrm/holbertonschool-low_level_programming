@@ -15,17 +15,22 @@ return;
 if (d->name == NULL)
 {
 printf("Name: (Nil)");
-}
+}else
+{
 printf("Name: %s\n", d->name);
-
+}
 if (d->age == 0)
 {
 printf("Age: (Nil)");
-}
+} else
+{
 printf("Age: %f\n", d->age);
+}
 if (d->owner == NULL)
 {
 printf("Owner: (Nil)");
-}
+} else
+{
 printf("Owner: %s\n", d->owner);
+}
 }

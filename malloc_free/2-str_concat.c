@@ -16,6 +16,7 @@ char *str_concat(char *s1, char *s2)
 	char *ar;
 	unsigned long int i = 0, j = 0;
 	unsigned long int lens1 = 0, lens2 = 0;
+	int n = lens1 + lens2 + 1;
 
 	if (s1 == NULL)
 	{
@@ -33,7 +34,7 @@ char *str_concat(char *s1, char *s2)
         {
                 lens2++;
         }
-	ar = malloc(( lens1 + lens2 + 1) * sizeof(char));
+	ar = malloc( n * sizeof(char));
 
 	if (ar == NULL)
 	{

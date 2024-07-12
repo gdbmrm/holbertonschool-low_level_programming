@@ -20,19 +20,19 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		s1 = "";
-	}	
+	}
 	if (s2 == NULL)
 	{
 		s2 = "";
 	}
 	while (s1[lens1] != '\0')
-        {
-                lens1++;
-        }
+	{
+		lens1++;
+	}
 	while (s2[lens2] != '\0')
-        {
-                lens2++;
-        }
+	{
+		lens2++;
+	}
 	ar = malloc(lens1 + lens2 + 1);
 
 	if (ar == NULL)

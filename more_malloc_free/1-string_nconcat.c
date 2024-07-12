@@ -33,9 +33,9 @@ int _strlen(char *s)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	unsigned int i = 0, j = 0;
 	char *ar;
-	unsigned int i = 0, j = 0, lens2 = 0;
-
+	unsigned int lens2 = _strlen(s2);
 
 	if (s1 == NULL)/** test si la chaine est NULL*/
 	{
@@ -45,11 +45,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	while (s2[lens2] != '\0')/** longueur de s2*/
-	{
-		lens2++;
-	}
 	ar = malloc((_strlen(s1) + n) + 1);/**allocation des 2len + '\0'*/
+
 	if (ar == NULL)
 	{
 		return (NULL);
@@ -61,7 +58,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n >= lens2)
 	{
-		while ( s2[j] != '\0')
+		while (s2[j] != '\0')
 		{
 			ar[i] = s2[j];
 			j++;

@@ -1,7 +1,16 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * _strdup - fonction qui copie la strdup
+ *
+ * Function that returns a pointer to a newly allocated space in memory,
+ * which contains a copy of the string given as a parameter.
+ *
+ * @str: tableau a recopier
+ *
+ * Return: nouveau tableau identique a str
+ */
 char *_strdup(char *str)
 {
 	char *ar;
@@ -30,7 +39,14 @@ char *_strdup(char *str)
 	ar[i] = '\0';
 	return (ar);
 }
-
+/**
+* new_dog - crée un nouveau chien
+*Write a function that creates a new dog.
+* @name: nom du chien
+* @age: age du chien
+* @owner: nom du proprio
+* Return: le nouveau chien
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *will;
@@ -62,5 +78,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	will->name = _strdup(name);
 	will->owner = _strdup(owner);
-	return (will);	
+	return (will);
 }

@@ -2,6 +2,25 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
+ * _strlen - fonction qui renvoie la longeur d'un string
+ *
+ * Write a function that returns the length of a string.
+ *
+ * @s: string d'entrÃe
+ *
+ * Return: longeur du string
+ */
+int _strlen(char *s)
+{
+	int len;
+
+	for (len = 0; s[len] != '\0'; len++)
+	{
+	}
+	return (len);
+}
+
+/**
  * string_nconcat - nom fonction
  *
  * Write a function that concatenates two strings.
@@ -15,8 +34,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ar;
-	unsigned int i = 0, j = 0;
-	unsigned int lens1 = 0, lens2 = 0;
+	unsigned int i = 0, j = 0, lens2 = 0;
+
 
 	if (s1 == NULL)/** test si la chaine est NULL*/
 	{
@@ -30,11 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		lens2++;
 	}
-	while (s1[lens1] != '\0')/** longueur de s1*/
-	{
-		lens1++;
-	}
-	ar = malloc((lens1 + lens2 + 1) * sizeof(char));/**allocation dynamique des 2len + '\0'*/
+	ar = malloc((_strlen(s1) + _strlen(s2) + 1));/**allocation des 2len + '\0'*/
 	if (ar == NULL)
 	{
 		return (NULL);
@@ -46,7 +61,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n >= lens2)
 	{
-		while (s2[j] != '\0')
+		while (_strlen(s2) != '\0')
 		{
 			ar[i] = s2[j];
 			j++;

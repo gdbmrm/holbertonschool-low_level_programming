@@ -61,7 +61,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n >= lens2)
 	{
-		while (_strlen(s2) != '\0')
+		while ( s2[j] != '\0')
 		{
 			ar[i] = s2[j];
 			j++;

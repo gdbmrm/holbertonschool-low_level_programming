@@ -8,21 +8,20 @@
 
 void free_dog(dog_t *d)
 {
-    if (d == NULL)
-    {
-        return;
-    }
-free(d);
+	if (d == NULL)
+	{
+		return;
+	}
 
-if (d->name == NULL)
-{
-    exit(0);
-}
-free(d->name);
+	if (d->name != NULL)
+	{
+		free(d->name);
+	}
 
-if (d->owner == NULL)
-{
-    exit(0);
-}
-free(d->owner);
+	if (d->owner != NULL)
+	{
+		free(d->owner);
+	}
+	free(d);
+
 }

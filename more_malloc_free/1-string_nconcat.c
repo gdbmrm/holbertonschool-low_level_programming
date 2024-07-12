@@ -49,7 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		lens2++;
 	}
-	ar = malloc((_strlen(s1) + _strlen(s2) + 1));/**allocation des 2len + '\0'*/
+	ar = malloc((_strlen(s1) + n) + 1);/**allocation des 2len + '\0'*/
 	if (ar == NULL)
 	{
 		return (NULL);

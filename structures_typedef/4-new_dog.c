@@ -50,7 +50,6 @@ char *_strdup(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *will;
-	int len_name, len_owner;
 
 	will = malloc(sizeof(dog_t));
 	if (will == NULL)
@@ -58,25 +57,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	will->name = name;
-	will->age = age;
-	will->owner = owner;
+	will->name = _strdup(name);
 
-	for (len_name = 0; name[len_name] != '\0'; len_name++)
-	{
-	}
-
-	for (len_owner = 0; owner[len_owner] != '\0'; len_owner++)
-	{
-	}
-	will->name = malloc(len_name + 1);
-	will->owner = malloc(len_owner + 1);
-
-	if (will->name == NULL || will->owner == NULL)
+	if (will->name == NULL)
 	{
 		free(will);
+		return (NULL);
 	}
-	will->name = _strdup(name);
+
 	will->owner = _strdup(owner);
+
+	if (will->owner == NULL)
+	{
+		free(will);
+		free(will->name);
+		return (NULL);
+	}
+	will->age = age;
 	return (will);
 }

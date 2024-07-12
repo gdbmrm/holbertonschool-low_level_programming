@@ -35,42 +35,38 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0, j = 0;
 	char *ar;
-	unsigned int lens2 = _strlen(s2);
+	unsigned int lens2 = 0;
 
 	if (s1 == NULL)/** test si la chaine est NULL*/
 	{
-		s1 = "";
-	}
+		s1 = ""; }
 	if (s2 == NULL)/** test si la chaine est NULL*/
 	{
-		s2 = "";
-	}
+		s2 = ""; }
 	ar = malloc((_strlen(s1) + n) + 1);/**allocation des 2len + '\0'*/
 
 	if (ar == NULL)
 	{
-		return (NULL);
-	}
+		return (NULL); }
+	while (s2[lens2] != '\0')/** longueur de s2*/
+	{
+		lens2++; }
 	while (s1[i] != '\0') /**pour copier s1 dans ar*/
 	{
 		ar[i] = s1[i];
-		i++;
-	}
+		i++; }
 	if (n >= lens2)
 	{
 		while (s2[j] != '\0')
 		{
 			ar[i] = s2[j];
 			j++;
-			i++;
-		}
-	}
+			i++; }}
 	while (j < n && s2[j] != '\0') /**copie a la suite s2 dans ar*/
 	{
 		ar[i] = s2[j];
 		j++;
-		i++;
-	}
+		i++; }
 	ar[i] = '\0';
 	return (ar);
 }

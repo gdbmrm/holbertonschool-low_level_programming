@@ -16,13 +16,13 @@ free(d);
 
 if (d->name == NULL)
 {
-    return;
+    exit(0);
 }
 free(d->name);
 
 if (d->owner == NULL)
 {
-    return;
+    exit(0);
 }
 free(d->owner);
 }

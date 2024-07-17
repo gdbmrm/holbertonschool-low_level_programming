@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_numbers - nom fonction variadique
+ * print_strings - nom fonction variadique
  *
- * Write a function that prints numbers, followed by a new line.
+ * Write a function that prints strings, followed by a new line.
  *
- * @separator: sÃparateur de nombre
- * @n: nombre de nombre
+ * @separator: sÃparateur de charactere
+ * @n: nombre de charactere
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -23,23 +23,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		char *str = va_arg(args, char *);
-		if (str  == NULL)
-                {
-                        printf("(nil)");
-			break;
-                }
 
-		if (i == n - 1)
+		if (str == NULL) /** si la chaine est nulle*/
 		{
-			printf("%s", va_arg(args, char *));
-			break;
-		}
-		if (separator == NULL)
-		{
-			printf("%s", str);
+			printf("(nil)");
 		} else
 		{
 			printf("%s", str);
+		}
+		if (separator == NULL) /** si le separateur est nulle*/
+		{
+
+		} else if (i < n - 1) /** si c'est le dernier chara*/
+		{
 			printf("%s", separator);
 		}
 	}

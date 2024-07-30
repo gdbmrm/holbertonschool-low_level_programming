@@ -46,7 +46,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	element->len = strlen(str);
+	element->len = _strlen(str);
 	element->next = NULL;
 
 	if (*head == NULL) /* check si la tete n'est pas nulle*/

@@ -1,13 +1,13 @@
 #include "lists.h"
 /**
-* free_list - fonction
-* Write a function thatfree 
+* free_dlistint - fonction
+* Write a function that frees a dlistint_t list.
 * at the end of a list_t list.
 * @head: noeud a délivrer
 */
-void free_list(list_t *head)
+void free_dlistint(dlistint_t *head)
 {
-	list_t *temp;
+	dlistint_t *temp;
 
 	while (head != NULL)
 	{

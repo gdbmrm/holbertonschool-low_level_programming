@@ -32,9 +32,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		{
 			current = current->next; /* on avance*/
 		}
-	current->next = element; /*current pointe sur le nouveau noeud*/
-	element->next = NULL; /*le nouveau noeud pointe vers NULL*/
-	element->prev = *head;
+	current->next = element; /* Last node nœud pointe vers le nouveau nœud */
+	element->prev = current; /* Le new node pointe vers l'ancien dernier nœud */
 	}
 	return (element);
 }

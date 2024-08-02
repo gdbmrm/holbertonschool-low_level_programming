@@ -36,6 +36,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	res_write = write(STDOUT_FILENO, buffer, letters);
+	if (res_write == 0 || res_write == -1)
+	{
+		return (0);
+	}
 
 	close(res_open);
 	return (res_write);

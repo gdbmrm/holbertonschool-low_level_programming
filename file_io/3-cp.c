@@ -14,61 +14,69 @@ int create_file(const char *filename)
 	{
 		return (-1);
 	}
+	return(1);
 }
 
-ssize_t file_to_file(const char *filename, const char *filename_to)
+ssize_t file_to_file(const char *filename_from, const char *filename_to)
 {
-	int res_open = 0;
-	int res_write = 0, bytesRead = 0;
+	int res_open_from = 0, res_open_to;
+	int bytesRead = 0;
 	char *buffer;
 
-	if (filename == NULL || letters <= 0)
+	if (filename_from == NULL) 
 	{
 		return (0);
 	}
 
-	buffer = malloc(letters);
+	buffer = malloc(1024);
 	if (buffer == NULL)
 	{
 		return (0);
 	}
 
-	res_open = open(filename, O_RDONLY);
-	if (res_open == -1)
+	res_open_from = open(filename_from, O_RDONLY); /*open 1st file*/
+	if (res_open_from == -1)
+	{
+		free(buffer);
+		return (0);
+	}
+	res_open_to = open(filename_to, O_RDONLY); /* open 2nd file*/
+	if (res_open_to == -1)
 	{
 		free(buffer);
 		return (0);
 	}
 
-	bytesRead = read(res_open, buffer, 1024);
+	bytesRead = read(res_open_from, buffer, 1024);
 	if (bytesRead == -1)
 	{
-		close(res_open);
+		close(res_open_from);
 		free(buffer);
 		return (0);
 	}
 
-	res_write = write(bytesRead, buffer, 1024);
-	if (res_write == 0 || res_write == -1)
+	while ((bytesRead = read(buffer, 1, sizeof(buffer), filename_from)) > 0)
 	{
-		return (0);
-	}
+        write(buffer, 1, bytesRead, filename_to); /* copie du contenu*/
+    }
 
-	close(res_open);
+	close(res_open_to);
+	close(res_open_from);
 	free(buffer);
-	return (res_write);
+	return (bytes_read);
 }
 
 
 int main(int argc, char *argv[])
 {
+	int res = 0;
+
 	if (argc != 2)
 	{
 		exit(97);
 		dprintf("Usage: cp file_from file_to");
 	}
 
-
-
-
+	res = file_to_file(argv[1], argv[2]);
+	return(res);
 }

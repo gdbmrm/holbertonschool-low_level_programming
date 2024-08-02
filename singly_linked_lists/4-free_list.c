@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
 * free_list - fonction
-* Write a function thatfree 
+* Write a function thatfree
 * at the end of a list_t list.
 * @head: noeud a délivrer
 */

@@ -19,10 +19,21 @@ int _strlen(char *s)
 	}
 	return (len);
 }
+
+/**
+* append_text_to_file - fonction
+* Write a function that appends text at the end of a file.
+* @filename: nom du fichier
+* @text_content: contenu à ajouter dans le fichier
+* Return: 1 if the file exists
+* -1 if the file does not exist or if you do not have the required permissions
+* to write the file
+*/
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int bytesopen = 0, byteswritten = 0;
 	char *buffer;
+
 	if (filename == NULL)
 	{
 		return (-1);

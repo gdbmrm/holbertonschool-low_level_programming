@@ -34,12 +34,12 @@ int append_text_to_file(const char *filename, char *text_content)
 	int bytesopen = 0, byteswritten = 0;
 	char *buffer;
 
-	if (filename_to == NULL)
+	if (filename == NULL)
 	{
 		return (-1);
 	}
 
-	bytesopen = open(filename_to, O_APPEND | O_WRONLY);
+	bytesopen = open(filename, O_APPEND | O_WRONLY);
 	if (bytesopen == -1)
 	{
 		return (-1);
